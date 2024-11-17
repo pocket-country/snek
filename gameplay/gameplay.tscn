@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://dclys54dlcu7q"]
+[gd_scene load_steps=8 format=4 uid="uid://dclys54dlcu7q"]
 
 [ext_resource type="Script" path="res://gameplay/gameplay.gd" id="1_dsx45"]
 [ext_resource type="PackedScene" uid="uid://bufnm6hmny85" path="res://gameplay/head.tscn" id="2_2myb7"]
 [ext_resource type="Texture2D" uid="uid://ho7yvcbkeix7" path="res://gameplay/sprites/BasicGridSet.png" id="2_26fg8"]
 [ext_resource type="Script" path="res://gameplay/bounds.gd" id="3_cisbv"]
+[ext_resource type="Script" path="res://gameplay/spawner.gd" id="5_50hwr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_44xly"]
 resource_name = "BasicGrid"
@@ -43,4 +44,9 @@ unique_name_in_owner = true
 
 [node name="LowerRight" type="Marker2D" parent="Bounds"]
 unique_name_in_owner = true
-position = Vector2(1024, 552)
+position = Vector2(800, 448)
+
+[node name="Spawner" type="Node2D" parent="." node_paths=PackedStringArray("bounds")]
+unique_name_in_owner = true
+script = ExtResource("5_50hwr")
+bounds = NodePath("../Bounds")

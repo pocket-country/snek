@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpjqpieid6xeq"]
+
+[ext_resource type="Texture2D" uid="uid://bqsu40shvfqge" path="res://gameplay/sprites/Empty potion bottle small32.png" id="1_dx142"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gj6ya"]
+
+[node name="Food" type="Area2D" groups=["food"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dx142")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gj6ya")

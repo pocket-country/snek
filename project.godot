@@ -24,6 +24,10 @@ Global="*res://autoload/global.gd"
 window/size/viewport_width=800
 window/size/viewport_height=448
 
+[global_group]
+
+food=""
+
 [input]
 
 ui_cancel={
