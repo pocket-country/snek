@@ -25,7 +25,7 @@ func _ready() -> void:
 	spawner.spawn_food()
 	# add the head to our snake parts array
 	# I guess we don't instantiate it like the others as it is arady added to the gameplay scene manually when we built this thing
-	snake_parts.push_back(head)
+	#snake_parts.push_back(head)
 	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -57,16 +57,17 @@ func update_snake():
 	snake_ticks += 1
 	var new_position:Vector2 = head.position + (move_dir * Global.GRID_SIZE)
 	new_position = bounds.wrap_vector(new_position)
+	
 	head.move_to(new_position)
 	#print("Snake On The Move!", snake_ticks)
 	# roll through segments updating tail position
-	for i in range(1, snake_parts.size(), 1):   # note don't get head at 0
-		snake_parts[i].move_to(snake_parts[i - 1].last_position)
+	#for i in range(1, snake_parts.size(), 1):   # note don't get head at 0
+	#	snake_parts[i].move_to(snake_parts[i - 1].last_position)
 
 func _on_food_eaten():
 	print("gotcha")	
 	spawner.call_deferred("spawn_food")
-	spawner.call_deferred("spawn_tail",snake_parts[snake_parts.size() - 1].last_position)
+	#spawner.call_deferred("spawn_tail",snake_parts[snake_parts.size() - 1].last_position)
 	
 func _on_tail_added(tail:Tail):
 	snake_parts.push_back(tail)
