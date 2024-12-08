@@ -1,12 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwydpwlea65v0"]
+[gd_scene load_steps=11 format=3 uid="uid://dwydpwlea65v0"]
 
 [ext_resource type="Script" path="res://gameplay/tail.gd" id="1_hr1fd"]
+[ext_resource type="Texture2D" uid="uid://ewgob1lvf0j3" path="res://gameplay/sprites/snBody1.png" id="2_45u5l"]
 [ext_resource type="Texture2D" uid="uid://dvnm5vuy4w52c" path="res://gameplay/sprites/snBody.png" id="2_q02m4"]
+[ext_resource type="Texture2D" uid="uid://ce1qa651rkhr" path="res://gameplay/sprites/snBody2.png" id="3_7j4xb"]
+[ext_resource type="Texture2D" uid="uid://mrjuudprpe53" path="res://gameplay/sprites/snBody3.png" id="4_d70u2"]
+[ext_resource type="Texture2D" uid="uid://f0mfy0nhg72l" path="res://gameplay/sprites/snBody4.png" id="5_qklv6"]
+[ext_resource type="Texture2D" uid="uid://do36aqn0q8p6g" path="res://gameplay/sprites/snBody5.png" id="6_2ywgg"]
+[ext_resource type="Texture2D" uid="uid://cd54vvj0jrapl" path="res://gameplay/sprites/snBody6.png" id="7_i7bym"]
+[ext_resource type="Texture2D" uid="uid://cjvvirntv7gh5" path="res://gameplay/sprites/snBody7.png" id="8_x0f8m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qcuch"]
 
 [node name="Tail" type="Area2D"]
 script = ExtResource("1_hr1fd")
+textures = Array[Texture]([ExtResource("2_45u5l"), ExtResource("3_7j4xb"), ExtResource("4_d70u2"), ExtResource("5_qklv6"), ExtResource("6_2ywgg"), ExtResource("7_i7bym"), ExtResource("8_x0f8m")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_q02m4")
