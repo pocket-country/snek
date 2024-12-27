@@ -11,16 +11,17 @@ func set_score(n:int):
 func _on_restart_button_pressed() -> void:
 	# works only 'cause we have a simple single scene game
 	# This also seems a bit clumsy. See notes in black book
+	# TODO check what this does to the score
 	get_tree().reload_current_scene()
 
 func _on_quit_button_pressed() -> void:
-	## at the moment I also have this wired to the esc (default) and q keys.  
-	## TODO: move those bindings to load game over ... 
 	get_tree().quit()
+	# might want to roll credits or something.
 
 func _notification(what: int) -> void:
 # there are _enter_tree() and _exit_tree() that wrap these specific notifications
-#
+# so could maybe use those functions here.   Also this is to pause the game behind
+# the "UI"
 	match what:
 		NOTIFICATION_ENTER_TREE:
 			get_tree().paused = true

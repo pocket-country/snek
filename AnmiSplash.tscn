@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dubbcclo8ksod"]
+
+[ext_resource type="Texture2D" uid="uid://c1kryo1h63ow0" path="res://gameplay/sprites/SnekSplash.png" id="1_lj1bj"]
+[ext_resource type="Script" path="res://splash_canvas.gd" id="1_nvl1b"]
+
+[node name="ControlNode" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SplashCanvas" type="CanvasLayer" parent="."]
+script = ExtResource("1_nvl1b")
+
+[node name="BackgroundSprite" type="Sprite2D" parent="SplashCanvas"]
+position = Vector2(399, 223)
+texture = ExtResource("1_lj1bj")
+
+[node name="StartPoint" type="Marker2D" parent="SplashCanvas"]
+position = Vector2(128, 352)

@@ -1,5 +1,7 @@
 class_name Spawner extends Node2D
-#all purpose spawnner!  
+
+# All purpose spawnner!  Seems weird to have two different things in one 
+# script like this, but Mr Tutorial says ...
 
 signal tail_added(tail:Tail)
 
