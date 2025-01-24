@@ -1,2 +1,3 @@
-Another learning project, Godot 4 - Following you tube tutorials, a bit further out there.
+Another learning project, Godot 4 - Following you tube tutorials to get the basics ...
+Then moving a bit further out there.  See notes in dev log.
 Here's the playlist: https://youtu.be/c7HQwxs5y8w?si=eiaRq1FS7TXPwOhJ (@baconandgames)
